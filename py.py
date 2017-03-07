@@ -1,20 +1,3 @@
-"""Module reads and writes header and data for KTLX data. The files are:
-  - .eeg (patient information)
-  - .ent (notes, sometimes with a backup file called .ent.old)
-  - .erd (raw data)
-  - .etc (table of content)
-  - .snc (synchronization file)
-  - .stc (segmented table of content)
-  - .vtc (video table of content)
-  - .avi (videos)
-
-There is only one of these files in the directory, except for .erd, .etc., .avi
-These files are numbered in the format _%03d, except for the first one, which
-is not _000 but there is no extension, for backwards compatibility.
-
-This module contains functions to read each of the files, the files are called
-_read_EXT where EXT is one of the extensions.
-"""
 import scipy.io as sio
 from binascii import hexlify
 from datetime import timedelta, datetime
